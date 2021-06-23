@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+.d-none {
+  transform: translateY(-250%) translateX(-50%) !important;
+  transition: 0.5s all ease-in-out;
+}
+.d-block {
+  z-index: 555;
+  transition: 0.5s all ease-in-out;
+}
+
+.showInput {
+  display: block;
+}
+
+.hideInput {
+  display: none;
+}
+.modal {
+  position: fixed;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  border-radius: 20px;
+  min-width: 50vw;
+  max-height: 98vh;
+  overflow: auto;
+}
+.bg-light {
+  background-color: white;
+}
+.header {
+  border-bottom: 1px solid rgb(165, 163, 163);
+  padding-bottom: 5px;
+  display: grid;
+  align-content: center;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.title {
+  font-size: 2em;
+}
+
+@media screen and (max-width: 767px) {
+  .title {
+    font-size: 1.5em;
+  }
+}
+.close {
+  width: 30px;
+  background-color: transparent;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+.close:hover {
+  color: red;
+  transition: 0.3s all ease-in-out;
+}
+form {
+  margin-top: 10px;
+  display: grid;
+  gap: 1.54rem;
+}
+input {
+  padding: 5px;
+
+  border-bottom: 2px solid gray;
+  width: 100%;
+}
+
+select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid gray;
+}
+
+input:focus {
+  border-bottom: 2px solid lightblue;
+  outline: none;
+}
+
+select:focus {
+  border: 2px solid lightblue;
+}
+
+.footer {
+  border-top: 1px solid gray;
+  margin-top: 25px;
+  padding-top: 10px;
+}
+.bg-opacity {
+  background-color: #202933af;
+  margin: 0 !important;
+  padding: 0 !important;
+  position: fixed;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 999;
+  max-height: 100vh;
+}
+
+.btn {
+  border: none;
+  border-radius: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  box-shadow: 0 2px 3px #949090;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: none;
+}
+
+.send {
+  background-color: #b03033;
+  color: #fcf0f0;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
