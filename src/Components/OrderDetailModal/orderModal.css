@@ -60,7 +60,7 @@
   cursor: pointer;
 }
 .close:hover {
-  color: red;
+  color: var(--red);
   transition: 0.3s all ease-in-out;
 }
 form {
@@ -82,12 +82,12 @@ select {
 }
 
 input:focus {
-  border-bottom: 2px solid lightblue;
+  border-bottom: 2px solid var(--red);
   outline: none;
 }
 
 select:focus {
-  border: 2px solid lightblue;
+  border: 2px solid var(--red);
 }
 
 .footer {
@@ -125,7 +125,7 @@ select:focus {
 }
 
 .send {
-  background-color: #b03033;
+  background-color: var(--red);
   color: #fcf0f0;
 }
 

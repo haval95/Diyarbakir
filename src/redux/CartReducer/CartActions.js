@@ -5,6 +5,7 @@ import {
   ADD_TO_CART,
   REMOVE_FROM_CART,
   CART_RESET,
+  REMOVE_FROM_CART_COMPLETELY,
   UPDATE_ORDER_DETAIL,
 } from './ActionTypes'
 import { closeDetailModal } from '../OrderDetailReducer/OrderDetailActions'
@@ -27,6 +28,13 @@ export const updateOrderDetail = orderDetail => {
 export const removeFromCart = item => {
   return {
     type: REMOVE_FROM_CART,
+    payload: item,
+  }
+}
+
+export const removeOneItemFromCartCompletely = item => {
+  return {
+    type: REMOVE_FROM_CART_COMPLETELY,
     payload: item,
   }
 }

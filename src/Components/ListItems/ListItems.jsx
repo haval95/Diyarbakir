@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Spinner } from '@fortawesome/free-solid-svg-icons'
 import { v4 as uuid } from 'uuid'
 import { useLocation } from 'react-router-dom'
 import ItemCard from '../ItemCard'
 import Filter from '../../Helpers/Filter'
 import CategoryCard from '../CategoryCard'
-
+import Skeleton from 'react-loading-skeleton'
 const ListItems = () => {
   const categories = useSelector(state => state.categories)
   const location = useLocation()
@@ -64,7 +65,8 @@ const ListItems = () => {
       CategorySearchWord
     )
     if (SubCategorySearchWord && CategorySearchWord) {
-      return getFoodItemCards(FilteredCategoriesBySearchWords)
+      const items = getFoodItemCards(FilteredCategoriesBySearchWords)
+      return { items: items, name: FilteredCategoriesBySearchWords[0].name }
     }
     if (FilteredCategoriesBySearchWords && CategorySearchWord) {
       const listItems = FilteredCategoriesBySearchWords[0].subCategories.map(
@@ -75,30 +77,32 @@ const ListItems = () => {
           )
         }
       )
-      return listItems
+      return { items: listItems, name: FilteredCategoriesBySearchWords[0].name }
     }
     if (FilteredCategoriesBySearchWords) {
       const listItems = FilteredCategoriesBySearchWords.map(category => {
         return getSubsOrCategoriesCards(null, category)
       })
-      return listItems
+      return { items: listItems, name: 'Categories' }
     }
 
     return null
   }
 
-  return (
-    <div className="mt-2 text-start">
-      <h2 className="  px-07 pr-2 text-capitalize    inline rounded-right-xl py-05  ">
-        Categories
-      </h2>
-      <div className="grid sm-justify-center justify-content-center  min-cols-w-300 gap-1-5 p-1-5  align-center">
-        {categories.loading === false && categories.data.length
-          ? getItems()
-          : 'No Items were Found'}
+  if (categories.loading === false && categories.data.length) {
+    return (
+      <div className="mt-2 text-start t-red">
+        <h2 className="  px-07 pr-2 text-capitalize    inline rounded-right-xl py-05  ">
+          {getItems().name}
+        </h2>
+        <div className="grid sm-justify-center justify-content-center  min-cols-w-300 gap-1-5 p-1-5  align-center text-center">
+          {getItems().items}
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
+
+  return <div className=" p-1-5 m-1">Looking For Items...</div>
 }
 
 export default ListItems

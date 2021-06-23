@@ -3,6 +3,7 @@ import {
   CART_RESET,
   REMOVE_FROM_CART,
   UPDATE_ORDER_DETAIL,
+  REMOVE_FROM_CART_COMPLETELY,
 } from './ActionTypes'
 
 const initialState = {
@@ -96,6 +97,14 @@ const CartReducer = (state = initialState, action) => {
       return {
         ...state,
         ...newItem,
+      }
+
+    case REMOVE_FROM_CART_COMPLETELY:
+      return {
+        ...state,
+        totalPrice: state.totalPrice - newItem.item.price * newItem.item.qty,
+        numberOfItems: state.numberOfItems - newItem.item.qty,
+        lines: state.lines.filter(item => item.itemId !== newItem.itemId),
       }
 
     case CART_RESET:

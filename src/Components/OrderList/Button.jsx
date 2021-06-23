@@ -1,7 +1,8 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import swal from 'sweetalert'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { openDetalModal, uploadData } from '../../redux'
 
 const Button = () => {
@@ -52,23 +53,27 @@ const Button = () => {
     )
   }
 
-  return (
-    <button
-      type="button"
-      className="bg-red light px-1-5 py-05 rounded-lg shadow-btn cruser-pointer  mb-3"
-      onClick={() =>
-        cartItems.lines.length
-          ? dispatch(openDetalModal())
-          : swal({
-              title: 'Oh!',
-              text: 'Please Add Items to Your Cart, then try agian!',
-              icon: 'info',
-            })
-      }
-    >
-      MAKE ORDER
-    </button>
-  )
+  if (cartItems.lines.length) {
+    return (
+      <button
+        type="button"
+        className="bg-red light px-4 py-05 rounded-lg shadow-btn cruser-pointer  mb-3"
+        onClick={() =>
+          cartItems.lines.length
+            ? dispatch(openDetalModal())
+            : swal({
+                title: 'Oh!',
+                text: 'Please Add Items to Your Cart, then try agian!',
+                icon: 'info',
+              })
+        }
+      >
+        <FontAwesomeIcon icon={faCheck} />
+      </button>
+    )
+  }
+
+  return null
 }
 
 export default Button

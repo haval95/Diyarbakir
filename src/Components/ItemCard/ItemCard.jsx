@@ -66,7 +66,7 @@ const ItemCard = ({
 
       <div className="px-07 pt-1 text-capitalize ">{name}</div>
 
-      <div className="px-07 py-07 light  text-small text-justify">
+      <div className="px-07 py-07 light  text-small text-justify firstLetterCapital  text-lower text-wrap">
         {menuText}
       </div>
     </div>

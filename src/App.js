@@ -49,7 +49,7 @@ function App() {
         showConfirm={false}
         closeOnClickOutside
         onCancel={() => dispatch(stopLoaing())}
-        style={{ backgroundColor: '#FFFFFF', borderRadius: '20px' }}
+        style={{ backgroundColor: 'transparent', borderRadius: '20px' }}
       >
         <div className="light p-3 grid justify-center gap-2">
           <FontAwesomeIcon

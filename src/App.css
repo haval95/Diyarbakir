@@ -2,10 +2,10 @@
 
 :root {
   box-sizing: border-box;
-  --brown: #a3906a;
+  --brown: #b6a98c;
   --lightsh: #fcf0f0;
   --lightsh-hover: #c2b6b6;
-  --red: #b03033;
+  --red: #d89b00;
   --black: #202933;
   --grey: #2029334b;
   --grayShade: #3f4249;
@@ -45,6 +45,7 @@ h2 {
 .inline {
   display: inline;
 }
+
 .flex {
   display: flex;
 }
@@ -219,6 +220,13 @@ h2 {
 .bottom {
   bottom: 10%;
 }
+.top {
+  top: 2px;
+}
+.right {
+  right: 2px;
+}
+
 .left-15 {
   left: -15px;
 }
@@ -294,6 +302,7 @@ h2 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
 .pr-2 {
   padding-right: 2rem !important;
 }
@@ -365,6 +374,10 @@ body {
   height: 90px;
 }
 
+.h110 {
+  height: 110px;
+}
+
 .h-full {
   height: 100%;
 }
@@ -385,6 +398,17 @@ body {
 }
 .w-200 {
   width: 200px;
+}
+.text-wrap {
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.text-lower {
+  text-transform: lowercase;
+}
+
+.firstLetterCapital::first-letter {
+  text-transform: capitalize;
 }
 .min-w-40 {
   min-width: 40px;

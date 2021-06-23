@@ -1,9 +1,14 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
 import { useDispatch } from 'react-redux'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 import img1 from '../../assets/notFound.png'
-import { addToCard, removeFromCart } from '../../redux'
+import {
+  addToCard,
+  removeFromCart,
+  removeOneItemFromCartCompletely,
+} from '../../redux'
 
 const CartItemCard = ({ img, name, price, qty, id, ingredients }) => {
   const dispatch = useDispatch()
@@ -39,24 +44,54 @@ const CartItemCard = ({ img, name, price, qty, id, ingredients }) => {
       })
     )
   }
+
+  const removeCompletely = () => {
+    dispatch(
+      removeOneItemFromCartCompletely({
+        itemId: Number(id),
+        item: {
+          id: Number(id),
+          name,
+          imageLink: img,
+          ingredients,
+          price,
+          qty,
+        },
+      })
+    )
+  }
   return (
     <div
       className=" grid cols-5 justify-content-center align-self-start  px-1-5 black  "
       key={id}
     >
-      <div className="col-span-2  h90 over">
+      <div className="col-span-2  h110 over">
         <img
           src={img ? `https://woodloungerest.com/${img}` : img1}
-          className="h90 w-full rounded object-cover "
+          className="h110 w-full rounded object-cover "
           alt=""
         />
       </div>
-      <div className="col-span-3  grid   rounded bg-white px-07 py-07 gap-1 ml-1">
-        <div className="grid cols-2">
-          <p> {name}</p>
-          <h3> {price}</h3>
-        </div>
+      <div className="col-span-3  grid   rounded bg-white px-07 py-07 gap-1 ml-1 relative">
+        <div className="grid justify-self-start">
+          <h3>
+            {new Intl.NumberFormat('IQD', {
+              style: 'currency',
+              currency: 'IQD',
+            }).format(price)}{' '}
+          </h3>
 
+          <button
+            onClick={removeCompletely}
+            type="button"
+            className="  align-center t-red absolute  flex right top w-25 h-25 rounded-full cruser-pointer"
+          >
+            <FontAwesomeIcon icon={faTimesCircle} size="lg" />
+          </button>
+        </div>
+        <p className="align-center justify-self-start firstLetterCapital text-lower">
+          {name}
+        </p>
         <div className="grid cols-3 align-center justify-center">
           <button
             onClick={decreaseInCart}
