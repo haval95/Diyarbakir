@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Spinner } from '@fortawesome/free-solid-svg-icons'
+
 import { v4 as uuid } from 'uuid'
 import { useLocation } from 'react-router-dom'
 import ItemCard from '../ItemCard'
 import Filter from '../../Helpers/Filter'
 import CategoryCard from '../CategoryCard'
-import Skeleton from 'react-loading-skeleton'
+
 const ListItems = () => {
   const categories = useSelector(state => state.categories)
   const location = useLocation()
