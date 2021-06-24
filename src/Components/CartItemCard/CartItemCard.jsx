@@ -2,7 +2,11 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 import { useDispatch } from 'react-redux'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
+import {
+  faTimesCircle,
+  faPlusCircle,
+  faMinusCircle,
+} from '@fortawesome/free-solid-svg-icons'
 import img1 from '../../assets/notFound.png'
 import {
   addToCard,
@@ -98,7 +102,7 @@ const CartItemCard = ({ img, name, price, qty, id, ingredients }) => {
             type="button"
             className="rounded-full bg-red light justify-self-end w-25 h-25 cruser-pointer"
           >
-            -
+            <FontAwesomeIcon icon={faMinusCircle} size="lg" />
           </button>
           <h3>{qty}</h3>
           <button
@@ -106,7 +110,7 @@ const CartItemCard = ({ img, name, price, qty, id, ingredients }) => {
             type="button"
             className="rounded-full bg-red light justify-self-start w-25 h-25 cruser-pointer"
           >
-            +
+            <FontAwesomeIcon icon={faPlusCircle} size="lg" />
           </button>
         </div>
       </div>
