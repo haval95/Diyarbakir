@@ -47,7 +47,7 @@ const ItemCard = ({
           className="h-90 w-full rounded-top-lg object-cover"
         />
         <div className="absolute  flex left-15 bottom ">
-          <h6 className=" min-w-40 text-center center  p-05 pr-07 rounded bg-brown">
+          <h6 className=" min-w-40 text-center center light p-05 pr-07 rounded bg-brown">
             {new Intl.NumberFormat('IQD', {
               style: 'currency',
               currency: 'IQD',
@@ -64,7 +64,7 @@ const ItemCard = ({
         </div>
       </div>
 
-      <div className="px-07 pt-1 text-capitalize ">{name}</div>
+      <div className="px-07 pt-1 text-capitalize light ">{name}</div>
 
       <div className="px-07 py-07 light  text-small text-justify firstLetterCapital  text-lower text-wrap">
         {menuText}
