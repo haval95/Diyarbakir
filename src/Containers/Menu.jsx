@@ -4,8 +4,8 @@ import ListItems from '../Components/ListItems'
 
 const Home = () => {
   return (
-    <div className="p-1 grid sm-pt-60 t-red">
-      <h2> Diyarbakir Restaurant </h2>
+    <div className="p-1 grid sm-pt-60 t-red text-rtl">
+      <h2> ڕێستۆرانتی دیاربەکر </h2>
 
       <ListItems />
     </div>

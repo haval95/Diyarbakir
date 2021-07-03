@@ -60,13 +60,13 @@ const Navbar = () => {
             &times;
           </button>
           <Link to="/" onClick={() => setCollapsedNav(false)}>
-            HOME
+            سەرەکی
           </Link>
           <Link to="/menu" onClick={() => setCollapsedNav(false)}>
-            MENU
+            مینۆ
           </Link>
           <Link to="/about" onClick={() => setCollapsedNav(false)}>
-            ABOUT
+            دەربارە
           </Link>
           <Link
             to="/"
@@ -75,7 +75,7 @@ const Navbar = () => {
               dispatch(logOutUser())
             }}
           >
-            LOG OUT
+            چونەدەرەوە
           </Link>
         </div>
         {categories ? (

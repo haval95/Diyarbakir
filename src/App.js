@@ -58,7 +58,7 @@ function App() {
             pulse
             size="7x"
           />
-          <h1 className="t-red m-3 mt-4 text-3xl">Loading ...</h1>
+          <h1 className="t-red m-3 mt-4 text-3xl text-rtl">چاوەڕوانبە...</h1>
         </div>
       </SweetAlert>
 

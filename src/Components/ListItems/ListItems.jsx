@@ -82,7 +82,7 @@ const ListItems = () => {
       const listItems = FilteredCategoriesBySearchWords.map(category => {
         return getSubsOrCategoriesCards(null, category)
       })
-      return { items: listItems, name: 'Categories' }
+      return { items: listItems, name: 'بەشەکان' }
     }
 
     return null
@@ -101,7 +101,7 @@ const ListItems = () => {
     )
   }
 
-  return <div className=" p-1-5 m-1">Looking For Items...</div>
+  return <div className=" p-1-5 m-1">چاوەڕوانبە...</div>
 }
 
 export default ListItems

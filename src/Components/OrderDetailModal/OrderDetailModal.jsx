@@ -13,13 +13,13 @@ const OrderDetailModal = () => {
     <div
       className={`${
         orderModal.isOpen ? 'd-block' : 'd-none'
-      }  bg-opacity w-100 h-100   `}
+      }  bg-opacity w-100 h-100  text-rtl  `}
     >
       <div
         className={`${orderModal.isOpen ? 'd-block' : 'd-none'} modal bg-light`}
       >
         <div className="header">
-          <h6 className="title">Order Detail</h6>
+          <h6 className="title">زانیاری کەسی</h6>
           <button
             onClick={() => dispatch(closeDetailModal())}
             type="button"
@@ -33,7 +33,7 @@ const OrderDetailModal = () => {
             <input
               required
               type="text"
-              placeholder="Full Name"
+              placeholder="ناوی تەواو"
               name="customer"
               value={formState.customer}
               onChange={handleChange}
@@ -42,7 +42,7 @@ const OrderDetailModal = () => {
               required
               onChange={handleChange}
               type="text"
-              placeholder="Address"
+              placeholder="ناونیشان"
               name="address"
               value={formState.address}
             />
@@ -50,7 +50,7 @@ const OrderDetailModal = () => {
               required
               onChange={handleChange}
               type="text"
-              placeholder="Phone Number"
+              placeholder="ژمارەی تەلەفۆن"
               name="phoneNumber"
               value={formState.phoneNumber}
             />
@@ -74,10 +74,10 @@ const OrderDetailModal = () => {
                 className="cancel btn"
                 onClick={() => dispatch(closeDetailModal())}
               >
-                Cancel
+                پاشگەزبوونەوە
               </button>
               <button type="submit" className="send btn ">
-                Send Order
+                ناردنی داواکاری
               </button>
             </div>
           </form>

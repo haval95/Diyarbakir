@@ -26,28 +26,30 @@ const Button = () => {
             cartItems.lines.length
               ? sendOrder('dinning')
               : swal({
-                  title: 'Oh!',
-                  text: 'Please Add Items to Your Cart, then try agian!',
+                  title: 'ببورە',
+                  text: 'تکایە خواردن زیادبکە و پاشان هەوڵبدەرەوە',
                   icon: 'info',
+                  button: 'باش',
                 })
           }
         >
-          Dinning
+          داواکردنی خواردن
         </button>
         <button
           type="button"
-          className="bg-red light px-1-5 py-05 rounded-lg shadow-btn cruser-pointer"
+          className="bg-red light px-1-5 py-05 rounded-lg shadow-btn cruser-pointer text-rtl"
           onClick={() =>
             cartItems.lines.length
               ? sendOrder('take away')
               : swal({
-                  title: 'Oh!',
-                  text: 'Please Add Items to Your Cart, then try agian!',
+                  title: 'ببورە',
+                  text: 'تکایە خواردن زیادبکە و پاشان هەوڵبدەرەوە',
                   icon: 'info',
+                  button: 'باش',
                 })
           }
         >
-          Take Away
+          داواکردنی سەفەری
         </button>
       </div>
     )
@@ -63,7 +65,7 @@ const Button = () => {
             ? dispatch(openDetalModal())
             : swal({
                 title: 'Oh!',
-                text: 'Please Add Items to Your Cart, then try agian!',
+                text: 'تکایە خواردن زیادبکە و پاشان هەوڵبدەرەوە!',
                 icon: 'info',
               })
         }

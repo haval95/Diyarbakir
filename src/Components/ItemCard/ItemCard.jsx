@@ -46,7 +46,7 @@ const ItemCard = ({
           alt=""
           className="h-90 w-full rounded-top-lg object-cover"
         />
-        <div className="absolute  flex left-15 bottom ">
+        <div className="absolute  flex left-15 bottom text-ltr">
           <h6 className=" min-w-40 text-center center light p-05 pr-07 rounded bg-brown">
             {new Intl.NumberFormat('IQD', {
               style: 'currency',
