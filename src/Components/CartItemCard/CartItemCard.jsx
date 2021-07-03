@@ -93,7 +93,7 @@ const CartItemCard = ({ img, name, price, qty, id, ingredients }) => {
             <FontAwesomeIcon icon={faTimesCircle} size="lg" />
           </button>
         </div>
-        <p className="align-center justify-self-start firstLetterCapital text-lower">
+        <p className="align-center justify-self-end firstLetterCapital text-lower text-rtl">
           {name}
         </p>
         <div className="grid cols-3 align-center justify-center">

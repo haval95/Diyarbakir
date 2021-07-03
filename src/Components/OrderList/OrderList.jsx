@@ -35,7 +35,7 @@ const OrderList = () => {
           : null}
 
         <div className="p-1 grid justify-center ">
-          <p className="p-05 mb-1 border border-light text-rtl">
+          <p className="p-05 mb-1 bold border border-light text-rtl">
             کۆی گشتی:&nbsp;
             {new Intl.NumberFormat('IQD', {
               style: 'currency',

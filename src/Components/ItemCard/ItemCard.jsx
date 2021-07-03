@@ -56,7 +56,7 @@ const ItemCard = ({
 
           <button
             type="button"
-            className=" ml--10  shadow-btn  rounded-full w-25 h-25  bg-red light cruser-pointer text-lg "
+            className=" ml--10 mt-05 shadow-btn  rounded-full w-25 h-25  bg-red light cruser-pointer text-lg  "
             onClick={addItem}
           >
             +

@@ -285,6 +285,9 @@ h2 {
 .mt-1 {
   margin-top: 10px;
 }
+.mt-05 {
+  margin-top: 4px;
+}
 .mt-2 {
   margin-top: 2rem !important;
 }
@@ -361,6 +364,9 @@ h2 {
 body {
   font-family: 'Lato', sans-serif;
   font-family: 'CustomFont', sans-serif !important;
+}
+.bold {
+  font-size: 1.2rem;
 }
 .cols-2 {
   grid-template-columns: repeat(2, 1fr);
