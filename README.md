@@ -67,4 +67,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `yarn build` fails to minify
 
+## IN CASE OF ERROR WITH THE PACKAGES - CHECK THIS:
+
+----
+rm -rf node_modules
+
+yarn set version 1.22.14
+
+#1 Install nvm by following the instructions on the official nvm GitHub page: https://github.com/nvm-sh/nvm#installing-and-updating
+- #RUN: curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+- #RUN export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+THEN RUN THESE COMANDS 
+2- nvm ls-remote
+3- nvm install 15.4.0
+4- nvm use 15.4.0
+
+yarn install
+
+------
+
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
